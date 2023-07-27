@@ -1,5 +1,5 @@
 [package]
-name = "field_management_system"
+name = "field-management-system"
 version = "0.1.0"
 edition = "2021"
 
