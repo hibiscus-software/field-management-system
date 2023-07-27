@@ -2,8 +2,6 @@
 // work is licensed under the terms of the MIT license which can be
 // found in the root directory of this project.
 
-mod field;
-mod network;
-mod plc;
-
-fn main() {}
+pub mod plc;
+pub mod plc_inputs;
+pub mod plc_outputs;

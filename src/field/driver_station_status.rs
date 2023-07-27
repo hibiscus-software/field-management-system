@@ -8,11 +8,19 @@ pub struct APStatus {
     pub quality: [&'static str],
 }
 
+/// Statuses that the robot sends to FMS
 pub struct RobotStatus {
     pub enabled: bool,
     pub mode: u8,
     pub estop: bool,
     pub radio_ping: bool,
+    pub rio_ping: bool,
+    pub last_linked_time: u16,
+    pub comms_active: bool,
+    pub battery_voltage: u16,
+    pub trip_time_ms: u16,
+    pub brownout: bool,
+    pub bandwidth: u16,
 }
 
 pub struct FMSStatus {

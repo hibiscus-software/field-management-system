@@ -26,6 +26,8 @@ pub struct DriverStation {
 }
 
 impl DriverStation {
+    fn new_driver_station_connection() {}
+
     /// Encodes the control information into a packet
     fn encode_control_packet(&self, driver_station: u8) -> [u8; 22] {
         let mut packet: [u8; 22] = [0; 22];
@@ -64,5 +66,11 @@ impl DriverStation {
         self.udp_connection
             .send(&packet)
             .expect("[ERROR] Unable to send control packet.");
+    }
+
+    /// Decodes a driver station status packet (0x16)
+    fn decode_status_packet(&mut self, data: [u8; 36], driver_station: u8) {
+        // Parse brownout (bit 7)
+        self.robot_status.brownout = ((data[4] >> 7) & 0x1) != 0;
     }
 }
