@@ -14,7 +14,7 @@ const DS_NAMES: [str; 6] = ["RED 1", "RED 2", "RED 3", "BLUE 1", "BLUE 2", "BLUE
 pub struct DriverStation {}
 
 pub impl DriverStation {
-    fn encodeControlPacket(driver_station: u8) -> [u8; 22] {
+    fn encode_control_packet(driver_station: u8) -> [u8; 22] {
         let mut packet: [u8; 22] = [];
 
         // Protocol version
