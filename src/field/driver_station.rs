@@ -28,11 +28,11 @@ pub struct DriverStation {
 impl DriverStation {
     fn new_driver_station_connection() {}
 
-    /// Encodes the control information into a packet
+    /// Encodes the control information into a packet.
     fn encode_control_packet(&mut self, driver_station: u8) -> [u8; 22] {
         let mut packet: [u8; 22] = [0; 22];
 
-        // Packet number, stored big-endian in two bytes
+        // Packet number, stored big-endian in two bytes.
         packet[0] = (self.ds_status.packet_count >> 8) & 0xff;
         packet[1] = self.ds_status.packet_count & 0xff;
 
@@ -62,7 +62,7 @@ impl DriverStation {
         return packet;
     }
 
-    /// Encodes and sends the next control packet to the driver station
+    /// Encodes and sends the next control packet to the driver station.
     fn send_control_packet(&mut self, driver_station: u8) {
         let packet = self.encode_control_packet(driver_station);
         self.udp_connection
