@@ -2,6 +2,13 @@
 // work is licensed under the terms of the MIT license which can be
 // found in the root directory of this project.
 
-pub mod field;
-pub mod driver_station;
-pub mod driver_station_status;
+pub struct Field {
+
+}
+
+impl Field {
+    #[must_use]
+    pub const fn new() -> Self {
+        return Self {};
+    }
+}

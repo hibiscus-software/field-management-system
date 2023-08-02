@@ -6,4 +6,6 @@ mod field;
 mod network;
 mod plc;
 
-fn main() {}
+fn main() {
+    let field = Field::new();
+}
