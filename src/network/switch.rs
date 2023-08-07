@@ -40,7 +40,7 @@ impl Switch {
     /// Returns a map of currently-configured team IDs to VLANs.
     fn get_team_vlans(&mut self) {
         // Get the entire config dump.
-        let mut config = self.run_command("show running-config\n");
+        let mut config = self.send_command("show network\n");
 
         // Parse out the team IDs and VLANs from the config dump
 
@@ -49,7 +49,7 @@ impl Switch {
 
     /// Logs into the switch via SSH and runs the given command in user exec mode.
     /// Reads the output and returns it as a string.
-    fn run_command(&mut self, command: &str) -> String {
+    fn send_command(&mut self, command: &str) -> String {
         // Open a SSH connection to the switch.
         let tcp = TcpStream::connect(self.ip_address.to_owned() + ":" + SSH_PORT).unwrap();
         let mut session = Session::new().unwrap();
@@ -71,8 +71,8 @@ impl Switch {
 
     /// Logs into the switch via SSH and runs the given command in global
     /// config mode. Reads the output and returns it as a string.
-    fn run_config_command(&mut self, command: &str) -> String {
-        return self.run_command(
+    fn send_config_command(&mut self, command: &str) -> String {
+        return self.send_command(
             &("config terminal\n%send\ncopy running-config startup-config\n\n".to_owned()
                 + command),
         );
