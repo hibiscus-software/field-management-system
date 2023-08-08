@@ -2,6 +2,9 @@
 // work is licensed under the terms of the MIT license which can be
 // found in the root directory of this project.
 
+use ssh2::Session;
+use std::{io::Read, net::TcpStream};
+
 const SSH_PORT: &str = "22";
 
 pub struct AccessPoint {
