@@ -26,20 +26,20 @@ pub struct DriverStation {
 }
 
 impl DriverStation {
-    fn new_driver_station_connection() {}
+    fn new() {}
 
     /// Encodes the control information into a packet.
     fn encode_control_packet(&mut self, driver_station: u8) -> [u8; 22] {
         let mut packet: [u8; 22] = [0; 22];
 
         // Packet number, stored big-endian in two bytes.
-        packet[0] = (self.ds_status.packet_count >> 8) & 0xff;
+        packet[0] = ((self.ds_status.packet_count >> 8) & 0xff) as u8;
         packet[1] = self.ds_status.packet_count & 0xff;
 
-        // Protocol version
+        // Protocol version.
         packet[2] = 0;
 
-        // Robot status
+        // Robot status.
         packet[3] = 0;
         if self.fms_status.auto {
             packet[3] |= 0x02;
@@ -51,10 +51,10 @@ impl DriverStation {
             packet[3] |= 0x80;
         }
 
-        // Unknown or unused
+        // Unknown or unused.
         packet[4] = 0;
 
-        // Driver station
+        // Driver station.
         packet[5] = driver_station;
 
         self.ds_status.packet_count += 1;
