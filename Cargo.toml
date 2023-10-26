@@ -4,4 +4,5 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+s7 = "0.1.9"
 ssh2 = "0.9.4"

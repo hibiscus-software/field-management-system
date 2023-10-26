@@ -16,7 +16,7 @@ pub struct PLCInputs {
     pub blue_connected_1: bool,
     pub blue_connected_2: bool,
     pub blue_connected_3: bool,
-    pub input_count: u8,
+    pub input_count: u16,
 }
 
 impl PLCInputs {
