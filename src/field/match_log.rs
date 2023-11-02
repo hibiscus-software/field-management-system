@@ -2,7 +2,10 @@
 // work is licensed under the terms of the MIT license which can be
 // found in the root directory of this project.
 
-pub mod driver_station;
-pub mod driver_station_status;
-pub mod field;
-pub mod match_log;
+use std::fs::File;
+
+pub struct MatchLog {
+    log_file: File,
+}
+
+impl MatchLog {}
