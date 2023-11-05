@@ -1,6 +1,6 @@
 # Field Management System
 
-![](https://img.shields.io/badge/license-MIT-blue)
+![GitHub](https://img.shields.io/github/license/codexmicrosystems/field-management-system)
 
 A Rust implementation of the FIRST Robotics Competition Field Management System.
 
