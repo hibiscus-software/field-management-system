@@ -1,0 +1,14 @@
+[book]
+title = "Field Management System"
+description = "Documentation for the Rust Field Management System."
+authors = ["Cody Wellman <cod@codexmicro.systems>"]
+src = "src"
+language = "en"
+multilingual = false
+
+[output.html]
+git-repository-url = "https://github.com/codexmicrosystems/field-management-system"
+additional-js = ["mermaid.min.js", "mermaid-init.js"]
+
+[preprocessor.mermaid]
+command = "mdbook-mermaid"
