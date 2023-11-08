@@ -1,8 +1,11 @@
-# Field Management System
+![Codex Microsystems Logo](https://raw.githubusercontent.com/codexmicrosystems/.github/main/profile/fms-logo-rect.png)
 
-![GitHub](https://img.shields.io/github/license/codexmicrosystems/field-management-system)
+<h6 align="center">
+    <a href="./LICENSE.md">License</a>
+  · <a href="https://codexmicro.systems/field-management-system/">Docs</a>
+</h6>
 
-A Rust implementation of the FIRST Robotics Competition Field Management System.
+<hr/>
 
 ## Features
 
