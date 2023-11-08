@@ -1,7 +1,7 @@
 ![Codex Microsystems Logo](https://raw.githubusercontent.com/codexmicrosystems/.github/main/profile/fms-logo-rect.png)
 
 <h6 align="center">
-    <a href="./LICENSE.md">License</a>
+    <a href="./LICENSE">License</a>
   · <a href="https://codexmicro.systems/field-management-system/">Docs</a>
 </h6>
 
